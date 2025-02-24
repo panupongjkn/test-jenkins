@@ -23,9 +23,7 @@ pipeline {
         }
         stage('List all after') {
             steps {
-                sh 'ls -a'
-                sh 'cd dist'
-                sh 'ls -a'
+                sh 'cd dist && ls -a'
             }
         }
         stage('Deploy') {
