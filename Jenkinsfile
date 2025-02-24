@@ -9,21 +9,21 @@ pipeline {
         }
         stage('npm install') {
             steps {
-                nodejs("NodeJS 13.8.0") {
+                nodejs("NodeJS 23.8.0") {
                     sh 'npm install'
                 }
             }
         }
         stage('npm build') {
             steps {
-                nodejs("NodeJS 13.8.0") {
+                nodejs("NodeJS 23.8.0") {
                     sh 'npm run build'
                 }
             }
         }
         stage('List all after') {
             steps {
-                sh 'npm install'
+                sh 'ls -a'
             }
         }
         stage('Deploy') {
